@@ -27,7 +27,7 @@ public class LabsTest {
     @Test
     void testParallel() {
         Results results = Runner.path("src/test/java/bdd/booker")
-                .outputCucumberJson(true).parallel(2);
+                .outputCucumberJson(true).parallel(1);
         generateCucumberReport(results.getReportDir());
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
