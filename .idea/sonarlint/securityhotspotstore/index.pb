@@ -27,3 +27,8 @@ S
 -src/test/java/bdd/booker/createBooker.feature,a\2\a219e7c7d356bcb1a33527f7c809d9746c3732e3
 N
 src/test/java/logback-test.xml,0\b\0b0365a0d5b2558321a5da0f2bc253bb92d1c8ad
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+;
+Jenkinsfile,0\c\0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
