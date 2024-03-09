@@ -1,26 +1,21 @@
 Feature: Create a book
 
   Background:
-    * url "https://restful-booker.herokuapp.com"
-    
+    * url "https://jsonplaceholder.typicode.com"
+
   @create-book
   Scenario: Create a book
-    Given path '/booking'
+    Given path '/posts'
     And header Content-Type = "application/json"
     And request
     """
     {
-      "firstname": "Sally",
-      "lastname": "Brown",
-      "totalprice": 111,
-      "depositpaid": true,
-      "additionalneeds": "Breakfast",
-      "bookingdates": {
-        "checkin": "2013-02-23",
-        "checkout": "2014-10-23"
-      }
-    }
+  "id": 101,
+  "title": "foo",
+  "body": "bar",
+  "userId": 1
+}
     """
     When method post
-    Then status 200
+    Then status 201
     And print response
