@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static util.reportsUtil.generateCucumberReport;
 
-public class RunnerParallel {
-    private static final Logger logger = LoggerFactory.getLogger(RunnerParallel.class);
+public class LabsTest {
+    private static final Logger logger = LoggerFactory.getLogger(LabsTest.class);
 
     @BeforeAll
     static void beforeClass() {
@@ -26,10 +26,10 @@ public class RunnerParallel {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("src/test/java/bdd/booker/listBooker.feature")
-//                        .tags("@test-request")
+        Results results = Runner.path("src/test/java/bdd/booker")
                 .outputCucumberJson(true).parallel(2);
         generateCucumberReport(results.getReportDir());
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
+
 }
